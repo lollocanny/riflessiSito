@@ -1,11 +1,13 @@
 package it.uniroma3.siw.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Piatto {
 
 	@Id
@@ -22,6 +24,10 @@ public class Piatto {
 	@ManyToOne
 	private PortataMenu portataMenu;
 
+	public Piatto() {
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}

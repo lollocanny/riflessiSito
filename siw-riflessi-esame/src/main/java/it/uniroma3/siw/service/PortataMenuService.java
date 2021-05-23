@@ -5,10 +5,12 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import it.uniroma3.siw.model.PortataMenu;
 import it.uniroma3.siw.repository.PortataMenuRepository;
 
+@Service
 public class PortataMenuService {
 	
 	@Autowired

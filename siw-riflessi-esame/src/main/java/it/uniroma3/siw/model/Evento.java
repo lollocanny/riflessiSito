@@ -1,10 +1,12 @@
 package it.uniroma3.siw.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Evento {
 	
 	@Id
@@ -24,6 +26,10 @@ public class Evento {
 	@Column(nullable = false)
 	private String orario;
 
+	public Evento() {
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}

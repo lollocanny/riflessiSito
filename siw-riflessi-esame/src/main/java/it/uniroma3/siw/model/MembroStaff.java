@@ -1,10 +1,12 @@
 package it.uniroma3.siw.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class MembroStaff {
 	
 	@Id
@@ -21,6 +23,10 @@ public class MembroStaff {
 	@Column(nullable = false)
 	private String descrizione;
 
+	public MembroStaff() {
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}
