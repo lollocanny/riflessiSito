@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html lang="it" xmlns="http://www.w3.org/1999/xhtml"><head>
-    <title>Galleria SIW</title>
+    <title>Riflessi restaurant</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
-	<div class="container">
-		<div class="container_content">
-			<div class="container_content_inner">
-				<div class="title">
-	  				<h1>Benvenuto sul sito di Riflessiiii</h1>
-				</div>
-				<div class="btns">
-					<span><button type="submit">Home page</button></span>
-				</div>
-			</div>
-		</div>
- 			<div class="container_outer_img">
- 				<div class="img-inner">
- 					<img th:src="@{/img/logo.jpg}" alt="" class="container_img">
-       			</div>
-     		</div>
-  		</div>
-<div class="overlay"></div>
-
-
+<body background="@{/img/homePage.jpg}">
+	<div class="logo">
+			<a href="/" data-async>
+			<img class="logo" th:src="@{/img/logoHome.jpg}" alt="">
+			</a>
+	</div>
 </body></html>
