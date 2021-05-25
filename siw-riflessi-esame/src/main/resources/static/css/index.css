@@ -10,37 +10,47 @@
 
 body{
 	background-color: white;
-	background-image: url(../img/homePageTerrazza.jpg);
+	background-image: url(../img/homePageTerrazza1.jpg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+
+.logo{
+	margin-top: 1%;
+}
 .logo a {
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
     font-size: 17px;
+    padding:2%;
+    margin:100;
 }
 
 .containerBox{
-	padding-left: 5.55555556%;
-    padding-right: 5.55555556%;
     text-align: center;
-    padding: 23% 8%;
     top: 50%;
     color:white;
-    position:relative;
-    margin:auto;
-    font-family: Verdana;
-    column-count: 3;
-    text-align: justify;
-    background-color: none;
-
+    font-family: 'Times New Roman', Times, serif;
+    column-count: 4;
+    justify-content: center;
+    align-items: center;
+	padding:18% 5% 0% 0%;
+	margin:1%;
+	column-width: 10px;
 }
 
+.menu{
+	box-shadow: 0px 10px 10px -10px rgba(255,255,255,0.4);
+	transition:all 2s;
+}
+.menu:hover{
+	box-shadow: 0px 10px 10px -10px rgba(25, 181, 254, 1);
+	transform: translateY(-7px) ;
+}
 .menu a{
 	text-decoration: none;
 	color:white;
@@ -49,12 +59,21 @@ body{
 .menu a h2{
 	font-weight: bold;
 	background-color: none;
-	font-size:70px;
+	font-size:75px;
 	display:block;
 	text-transform: uppercase;
 	text-decoration-color: white;
+	}
+
+.location{
+	box-shadow: 0px 10px 10px -10px rgba(255,255,255,0.4);
+	transition:all 2s;
 }
 
+.location:hover{
+	box-shadow: 0px 10px 10px -10px rgba(25, 181, 254, 1);
+	transform: translateY(-7px) ;
+}
 .location a{
 	text-decoration: none;
 	color:white;
@@ -62,11 +81,19 @@ body{
 .location a h2{
 	font-weight: bold;
 	background-color: none;
-	font-size:70px;
+	font-size:75px;
 	display:block;
 	text-transform: uppercase;
 }
 
+.eventi{
+	box-shadow: 0px 10px 10px -10px rgba(255,255,255,0.4);
+	transition:all 2s;
+}
+.eventi:hover{
+	box-shadow: 0px 10px 10px -10px rgba(25, 181, 254, 1);
+	transform: translateY(-7px) ;
+}
 .eventi a{
 	text-decoration: none;
 	color:white;
@@ -74,7 +101,28 @@ body{
 .eventi a h2{
 	font-weight: bold;
 	background-color: none;
-	font-size:70px;
+	font-size:75px;
+	display:block;
+	text-transform: uppercase;
+}
+
+.staff{
+	box-shadow: 0px 10px 10px -10px rgba(255,255,255,0.4);
+	transition:all 2s;
+}
+.staff:hover{
+	box-shadow: 0px 10px 10px -10px rgba(25, 181, 254, 1);
+	transform: translateY(-7px) ;
+}
+
+.staff a{
+	text-decoration: none;
+	color:white;
+}
+.staff a h2{
+	font-weight: bold;
+	background-color: none;
+	font-size:75px;
 	display:block;
 	text-transform: uppercase;
 }
