@@ -1,11 +1,11 @@
 package it.uniroma3.siw.service;
-
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,11 +19,11 @@ public class CredentialsService {
     protected CredentialsRepository credentialsRepository;
 
     @Autowired
-    protected PasswordEncoder passwordEncoder;
+    //protected PasswordEncoder passwordEncoder;
 
    
    @Transactional
-    public Credentials getCredentials(long id) {
+    public Credentials getCredentials(Long id) {
         Optional<Credentials> result = this.credentialsRepository.findById(id);
         return result.orElse(null);
     }
@@ -38,7 +38,7 @@ public class CredentialsService {
     @Transactional
     public Credentials saveCredentials(Credentials credentials) {
         credentials.setRole(Credentials.DEFAULT_ROLE);
-        credentials.setPassword(this.passwordEncoder.encode(credentials.getPassword()));
+        //credentials.setPassword(this.passwordEncoder.encode(credentials.getPassword()));
         return this.credentialsRepository.save(credentials);
     }
 
@@ -53,3 +53,4 @@ public class CredentialsService {
     }
 
 }
+*/
