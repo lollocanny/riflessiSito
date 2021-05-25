@@ -34,6 +34,7 @@ body{
     text-align: center;
     top: 50%;
     color:white;
+<<<<<<< HEAD
     font-family: 'Times New Roman', Times, serif;
     column-count: 4;
     justify-content: center;
@@ -41,6 +42,16 @@ body{
 	padding:18% 5% 0% 0%;
 	margin:1%;
 	column-width: 10px;
+=======
+    position:relative;
+    margin:auto;
+    font-family: Verdana;
+    column-count: 3;
+    text-align: justify;
+    background-color: none;
+    justify-content: space-around;
+
+>>>>>>> d38e93ec7df74218a6a9420ce777f6787eb1cc76
 }
 
 .menu{
