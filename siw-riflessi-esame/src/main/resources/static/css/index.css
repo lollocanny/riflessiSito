@@ -8,6 +8,15 @@
   --contrast-color: white;
 }
 
+body{
+	background-color: white;
+	background-image: url(../img/homePageTerrazza.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 .logo a {
     color: #f2f2f2;
     text-align: center;
@@ -16,6 +25,59 @@
     font-size: 17px;
 }
 
+.containerBox{
+	padding-left: 5.55555556%;
+    padding-right: 5.55555556%;
+    text-align: center;
+    padding: 23% 8%;
+    top: 50%;
+    color:white;
+    position:relative;
+    margin:auto;
+    font-family: Verdana;
+    column-count: 3;
+    text-align: justify;
+    background-color: none;
+
+}
+
+.menu a{
+	text-decoration: none;
+	color:white;
+}
+
+.menu a h2{
+	font-weight: bold;
+	background-color: none;
+	font-size:70px;
+	display:block;
+	text-transform: uppercase;
+	text-decoration-color: white;
+}
+
+.location a{
+	text-decoration: none;
+	color:white;
+}
+.location a h2{
+	font-weight: bold;
+	background-color: none;
+	font-size:70px;
+	display:block;
+	text-transform: uppercase;
+}
+
+.eventi a{
+	text-decoration: none;
+	color:white;
+}
+.eventi a h2{
+	font-weight: bold;
+	background-color: none;
+	font-size:70px;
+	display:block;
+	text-transform: uppercase;
+}
 .title {
   overflow: hidden;
   height: auto;
