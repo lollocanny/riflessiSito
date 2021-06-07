@@ -14,6 +14,6 @@ public class AdminController {
 		@RequestMapping(value = {"/visualizzaAdmin"}, method= RequestMethod.GET)
 		public String visualizzaAdmin(Model model) {
 			logger.debug("visualizzaAdmin");
-			return "admin.html";
+			return "login.html";
 		}
 }
