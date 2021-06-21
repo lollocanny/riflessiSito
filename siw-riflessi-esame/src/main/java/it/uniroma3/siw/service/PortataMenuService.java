@@ -27,7 +27,7 @@ public class PortataMenuService {
 	}
 
 	@Transactional
-	public List<PortataMenu> tutti() {
+	public List<PortataMenu> getAllPortataMenu() {
 		return (List<PortataMenu>) portataMenuRepository.findAll();
 	}
 	

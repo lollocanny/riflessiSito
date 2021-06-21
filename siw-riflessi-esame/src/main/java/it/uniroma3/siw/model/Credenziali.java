@@ -1,15 +1,13 @@
 package it.uniroma3.siw.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Credentials {
+public class Credenziali {
 
 	public static final String DEFAULT_ROLE = "DEFAULT";
 	public static final String ADMIN_ROLE = "ADMIN";
@@ -19,7 +17,7 @@ public class Credentials {
 	private long id;
 
 	@Column(nullable = false, unique = true)
-	private String userName;
+	private String username;
 
 	@Column(nullable = false)
 	private String password;
@@ -27,10 +25,8 @@ public class Credentials {
 	@Column(nullable = false)
 	private String role;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	private Utente utente;
 
-	public Credentials() {
+	public Credenziali() {
 
 	}
 
@@ -42,12 +38,12 @@ public class Credentials {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -64,14 +60,6 @@ public class Credentials {
 
 	public void setRole(String role) {
 		this.role = role;
-	}
-
-	public Utente getUtente() {
-		return utente;
-	}
-
-	public void setUtente(Utente utente) {
-		this.utente = utente;
 	}
 
 	public static String getDefaultRole() {

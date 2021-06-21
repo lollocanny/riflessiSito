@@ -25,6 +25,8 @@ public class Evento {
 	
 	@Column(nullable = false)
 	private String orario;
+	
+	private String immagine;
 
 	public Evento() {
 		
@@ -68,6 +70,16 @@ public class Evento {
 
 	public void setOrario(String orario) {
 		this.orario = orario;
+	}
+	
+	
+
+	public String getImmagine() {
+		return immagine;
+	}
+
+	public void setImmagine(String immagine) {
+		this.immagine = immagine;
 	}
 
 	@Override

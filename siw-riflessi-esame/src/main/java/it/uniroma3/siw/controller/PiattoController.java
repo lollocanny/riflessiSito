@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class PortataMenuController {
+public class PiattoController {
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	 
-	@RequestMapping(value = {"/visualizzaMenu"}, method= RequestMethod.GET)
+	@RequestMapping(value = {"/portataMenu/visualizzaMenu"}, method= RequestMethod.GET)
 	public String visualizzaMenu(Model model) {
 		logger.debug("visualizzaMenu");
 		return "menu.html";

@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class StaffController {
+public class MembroStaffController {
 	
 	
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	 
-	@RequestMapping(value = {"/visualizzaStaff"}, method= RequestMethod.GET)
+	@RequestMapping(value = {"membroStaff/visualizzaStaff"}, method= RequestMethod.GET)
 	public String visualizzaStaff(Model model) {
 		logger.debug("visualizzaStaff");
 		return "staff.html";

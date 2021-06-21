@@ -3,16 +3,17 @@
 
 <head>
 	<title>riflessirestaurant.com</title>
-	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/homePageAdmin.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 	<main>
-		<div class="logo">
-			<a th:href="@{/}">
+		<div class="top">
+			<a th:href="@{/admin/homePageAdmin}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
 			</a>
+			<h3>Benvenuto admin, gestisci il ristorante!</h3>
 		</div>
 		<div class="containerBox">
 			<div class="menu">
@@ -85,7 +86,7 @@
 			</div>
 			
 			<div class="admin">
-				<p><a href="/login" data-async>ADMIN</a></p>
+				<p><a href="/admin" data-async>Pagina admin</a></p>
 			</div>
 		</div>
 

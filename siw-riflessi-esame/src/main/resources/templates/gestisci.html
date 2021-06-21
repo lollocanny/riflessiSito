@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>riflessi.it</title>
+     <link rel="stylesheet"  href="/css/gestisci.css">
+</head>
+<body>
+		<a th:href="@{/admin/homePageAdmin}">
+				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
+		</a>
+		<h1 th:text="'Gestisci il ristorante!'"></h1>
+	<div class="operazioni">
+		<a class="aggiungiPiatto" href="/admin/aggiungiPiatto">Aggiungi Piatto</a>
+		<a class="aggiungiEvento" href="/admin/aggiungiEvento">Aggiungi Evento</a>
+		<a class="aggiungiMembroStaff" href="/admin/aggiungiMembroStaff">Aggiungi Membro staff</a>
+		<a class="rimuoviPiatto" href="/admin/rimuoviPiatto">Rimuovi Piatto</a>
+		<a class="rimuoviEvento" href="/admin/rimuoviEvento">Rimuovi Evento</a>
+		<a class="rimuoviMembroStaff" href="/admin/rimuoviMembroStaff">Rimuovi Membro staff</a>
+	</div>
+</body>
+</html>

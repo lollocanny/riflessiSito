@@ -13,7 +13,7 @@ public class LocationController {
 	
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	 
-	@RequestMapping(value = {"/visualizzaLocation"}, method= RequestMethod.GET)
+	@RequestMapping(value = {"location/visualizzaLocation"}, method= RequestMethod.GET)
 	public String visualizzaLocation(Model model) {
 		logger.debug("visualizzaLocation");
 		return "location.html";

@@ -1,6 +1,7 @@
 package it.uniroma3.siw.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -18,17 +19,23 @@ public class EventoService {
 	private EventoRepository eventoRepository; 
 	
 	@Transactional
-	public Evento inserisci(Evento evento) {
-		return eventoRepository.save(evento);
+	public void saveArtista(Evento a) {
+		eventoRepository.save(a);
 	}
 	
 	@Transactional
-	public List<Evento> eventoPerNome(String nome) {
-		return eventoRepository.findByNome(nome);
+	public void removeEvento(Long id) {
+		eventoRepository.deleteById(id);
 	}
 	
 	@Transactional
-	public List<Evento> tutti() {
+	public Evento getEvento(Long id) throws NoSuchElementException {
+		return eventoRepository.findById(id).get();
+	}
+	
+	
+	@Transactional
+	public List<Evento> getAllEventi() {
 		return (List<Evento>) eventoRepository.findAll();
 	}
 	

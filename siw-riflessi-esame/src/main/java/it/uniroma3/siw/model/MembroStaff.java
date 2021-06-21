@@ -13,7 +13,6 @@ public class MembroStaff {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id; 
 	
-	
 	@Column(nullable = false)
 	private String nome;
 	
@@ -22,6 +21,8 @@ public class MembroStaff {
 	
 	@Column(nullable = false)
 	private String descrizione;
+	
+	
 
 	public MembroStaff() {
 		
