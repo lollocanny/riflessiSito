@@ -17,17 +17,25 @@ public class MembroStaff {
 	private String nome;
 	
 	@Column(nullable = false)
-	private String cognome;
-	
-	@Column(nullable = false)
 	private String descrizione;
 	
-	
+	private String immagine;
 
 	public MembroStaff() {
 		
 	}
 	
+	
+	public String getImmagine() {
+		return immagine;
+	}
+
+
+	public void setImmagine(String immagine) {
+		this.immagine = immagine;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
@@ -44,13 +52,6 @@ public class MembroStaff {
 		this.nome = nome;
 	}
 
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
 
 	public String getDescrizione() {
 		return descrizione;
@@ -64,7 +65,7 @@ public class MembroStaff {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cognome == null) ? 0 : cognome.hashCode());
+		result = prime * result + ((immagine == null) ? 0 : immagine.hashCode());
 		result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
@@ -80,10 +81,10 @@ public class MembroStaff {
 		if (getClass() != obj.getClass())
 			return false;
 		MembroStaff other = (MembroStaff) obj;
-		if (cognome == null) {
-			if (other.cognome != null)
+		if (immagine == null) {
+			if (other.immagine != null)
 				return false;
-		} else if (!cognome.equals(other.cognome))
+		} else if (!immagine.equals(other.immagine))
 			return false;
 		if (descrizione == null) {
 			if (other.descrizione != null)

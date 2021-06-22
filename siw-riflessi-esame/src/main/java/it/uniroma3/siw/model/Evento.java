@@ -13,17 +13,14 @@ public class Evento {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id; 
 	
-	
 	@Column(nullable = false)
 	private String nome;
 	
-	@Column(nullable = false)
 	private String descrizione;
 	
 	@Column(nullable = false)
 	private String data;
 	
-	@Column(nullable = false)
 	private String orario;
 	
 	private String immagine;

@@ -19,7 +19,7 @@ public class EventoService {
 	private EventoRepository eventoRepository; 
 	
 	@Transactional
-	public void saveArtista(Evento a) {
+	public void saveEvento(Evento a) {
 		eventoRepository.save(a);
 	}
 	

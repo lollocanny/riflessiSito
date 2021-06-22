@@ -8,5 +8,5 @@ import it.uniroma3.siw.model.MembroStaff;
 
 public interface MembroStaffRepository extends CrudRepository<MembroStaff,Long>{
 
-	public List<MembroStaff> findByCognome(String cognome);
+	public List<MembroStaff> findByNome(String nome);
 }

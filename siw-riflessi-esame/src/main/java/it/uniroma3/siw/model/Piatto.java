@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Piatto {
@@ -20,13 +19,20 @@ public class Piatto {
 	@Column(nullable = false)
 	private String descrizione;
 	
-	@ManyToOne
-	private PortataMenu portataMenu;
+	private String immagine;
 
 	public Piatto() {
 		
 	}
 	
+	public String getImmagine() {
+		return immagine;
+	}
+
+	public void setImmagine(String immagine) {
+		this.immagine = immagine;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -51,14 +57,7 @@ public class Piatto {
 		this.descrizione = descrizione;
 	}
 
-	public PortataMenu getPortataMenu() {
-		return portataMenu;
-	}
-
-	public void setPortataMenu(PortataMenu portataMenu) {
-		this.portataMenu = portataMenu;
-	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -66,7 +65,6 @@ public class Piatto {
 		result = prime * result + ((descrizione == null) ? 0 : descrizione.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((portataMenu == null) ? 0 : portataMenu.hashCode());
 		return result;
 	}
 
@@ -94,11 +92,7 @@ public class Piatto {
 				return false;
 		} else if (!nome.equals(other.nome))
 			return false;
-		if (portataMenu == null) {
-			if (other.portataMenu != null)
-				return false;
-		} else if (!portataMenu.equals(other.portataMenu))
-			return false;
+		
 		return true;
 	} 
 	

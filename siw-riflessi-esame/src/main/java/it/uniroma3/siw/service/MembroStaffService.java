@@ -1,6 +1,7 @@
 package it.uniroma3.siw.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -18,17 +19,23 @@ public class MembroStaffService {
 	private MembroStaffRepository membroStaffRepository; 
 	
 	@Transactional
-	public MembroStaff inserisci(MembroStaff membroStaff) {
-		return membroStaffRepository.save(membroStaff);
+	public void saveMembroStaff(MembroStaff membroStaff) {
+		membroStaffRepository.save(membroStaff);
 	}
 	
 	@Transactional
-	public List<MembroStaff> membroStaffPerCognome(String cognome) {
-		return membroStaffRepository.findByCognome(cognome);
+	public void removeMembroStaff(Long id) {
+		membroStaffRepository.deleteById(id);
 	}
 	
 	@Transactional
-	public List<MembroStaff> tutti() {
+	public MembroStaff getMembroStaff(Long id) throws NoSuchElementException {
+		return membroStaffRepository.findById(id).get();
+	}
+
+	
+	@Transactional
+	public List<MembroStaff> getAllMembriStaff() {
 		return (List<MembroStaff>) membroStaffRepository.findAll();
 	}
 	
@@ -43,7 +50,7 @@ public class MembroStaffService {
 	
 	@Transactional
 	public boolean alreadyExists(MembroStaff membroStaff) {
-		List<MembroStaff> membriStaff = this.membroStaffRepository.findByCognome(membroStaff.getCognome());
+		List<MembroStaff> membriStaff = this.membroStaffRepository.findByNome(membroStaff.getNome());
 		if (membriStaff.size() > 0)
 			return true;
 		else 

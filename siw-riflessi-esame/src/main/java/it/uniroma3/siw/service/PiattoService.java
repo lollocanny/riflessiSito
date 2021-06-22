@@ -17,8 +17,14 @@ public class PiattoService {
 	@Autowired
 	private PiattoRepository piattoRepository; 
 	
+	
 	@Transactional
-	public Piatto inserisci(Piatto piatto) {
+	public void removePiatto(Long id) {
+		piattoRepository.deleteById(id);
+	}
+	
+	@Transactional
+	public Piatto savePiatto(Piatto piatto) {
 		return piattoRepository.save(piatto);
 	}
 	
@@ -28,7 +34,7 @@ public class PiattoService {
 	}
 	
 	@Transactional
-	public List<Piatto> tutti() {
+	public List<Piatto> getAllPiatti() {
 		return (List<Piatto>) piattoRepository.findAll();
 	}
 	

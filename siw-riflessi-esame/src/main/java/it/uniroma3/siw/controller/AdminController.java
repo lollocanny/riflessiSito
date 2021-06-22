@@ -48,4 +48,9 @@ public class AdminController {
 		public String homePageAdmin() {
 			return "homePageAdmin.html";
 		}
+		
+		@RequestMapping(value="/admin/homePageGestisci", method = RequestMethod.GET)
+		public String homePageGestisci() {
+			return "gestisci.html";
+		}
 }
