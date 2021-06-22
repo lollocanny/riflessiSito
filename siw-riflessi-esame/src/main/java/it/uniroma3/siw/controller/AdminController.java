@@ -33,7 +33,7 @@ public class AdminController {
 		    
 		    if (credenziali.getRole().equals(Credenziali.ADMIN_ROLE)) {
 		    	
-		    	return "homePageAdmin.html";
+		    	return "index.html";
 		    }
 		    return "index.html";
 		}
@@ -46,11 +46,17 @@ public class AdminController {
 		
 		@RequestMapping(value="/admin/homePageAdmin", method = RequestMethod.GET)
 		public String homePageAdmin() {
-			return "homePageAdmin.html";
+			return "index.html";
 		}
 		
 		@RequestMapping(value="/admin/homePageGestisci", method = RequestMethod.GET)
 		public String homePageGestisci() {
 			return "gestisci.html";
 		}
+		
+		@RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
+		public String index(Model model) {
+				return "index";
+		}
+
 }

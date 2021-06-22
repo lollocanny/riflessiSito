@@ -31,13 +31,18 @@ main .logo{
 	margin-top: 1%;
 }
 
-main .logo a {
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    padding:2% 1%;
-    margin:100;
+.top{
+	column-count: 2;
+}
+
+.top h3{
+	color:white;	
+	font-size: 28px;
+	margin-left: 50%;
+	padding-top: 7%;
+	position:relative;
+	
+	
 }
 
 main .containerBox{
@@ -270,6 +275,10 @@ main .containerBox .menu a h2{
 	text-decoration:none;
 	font-size: 16px;
 	color:white;
+}
+
+.footer .admin p{
+	margin-top: 6px;
 }
 
 

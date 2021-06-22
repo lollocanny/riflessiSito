@@ -9,10 +9,11 @@
 
 <body>
 	<main>
-		<div class="logo">
+		<div class="top">
 			<a th:href="@{/}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
 			</a>
+			<h3 sec:authorize="hasAnyAuthority('ADMIN')">Benvenuto admin, gestisci il ristorante!</h3>
 		</div>
 		<div class="containerBox">
 			<div class="menu">
@@ -85,8 +86,12 @@
 			</div>
 			
 			<div class="admin">
-				<p><a href="/login" data-async>ADMIN</a></p>
+				<p><a th:if="${#authorization.expression('!hasAnyAuthority(''ADMIN'')')}" href="/login" data-async>ADMIN</a></p>
+				<p><a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/admin}" data-async>PAGINA ADMIN</a></p>
+				<p><a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{/logout}">LOGOUT</a></p>
 			</div>
+			
+		
 		</div>
 
 	</footer>
