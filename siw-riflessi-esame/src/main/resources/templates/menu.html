@@ -1,98 +1,47 @@
 <!DOCTYPE html>
-<html lang="it" xmlns="http://www.w3.org/1999/xhtml"><head>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="https://www.thymeleaf.org"><head>
     <title>Menu riflessi</title>
     <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
-	<div class="logo">
+	<main>
+		<div class="logo">
 			<a th:href="@{/}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
 			</a>
 	</div>
+	<div class="titolo">
 			<h1>Menù</h1>
 			<p class="descrizione">Menu fantastico</p> 
-			
-			<h2>Antipasti</h2>
-			
-	<tr style="break-inside: avoid; page-break-inside: avoid;">
-		<td>
-			<p class="nomepiatto">Fritto misto</p>
-			<br>
-			<p class="descrizione-piatto">o frat ce sta de tutti vie vie viette a piglia u perdon</p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">22$</p>
-			</div>
-		</td>
-	</tr> 
-		<tr>
-		<td>
-			<p class="nomepiatto">Tartarrrr di pesce</p>
-			<br>
-			<p class="descrizione-piatto">Vuo fa pesce e pesce?? po po po po po </p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">120$</p>
-			</div>
-		</td>
-	</tr>
-	
-			
-			
-			<h2>Primi</h2>
-			
-	<tr style="break-inside: avoid; page-break-inside: avoid;">
-		<td>
-			<p class="nomepiatto">Pasta e vongole</p>
-			<br>
-			<p class="descrizione-piatto">Pasta con vongole veraci</p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">15$</p>
-			</div>
-		</td>
-	</tr> 
-		<tr>
-		<td>
-			<p class="nomepiatto">Pasta e patane</p>
-			<br>
-			<p class="descrizione-piatto">Pasta con patate km0 di rocco</p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">15$</p>
-			</div>
-		</td>
-	</tr>
-	
-		<h2>Secondi</h2>
-		
-	<tr style="break-inside: avoid; page-break-inside: avoid;">
-		<td>
-			<p class="nomepiatto">Fiorentina</p>
-			<br>
-			<p class="descrizione-piatto">nu piezz e carne veramente importante tipo quello di rocco delle patane km0</p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">35$</p>
-			</div>
-		</td>
-	</tr> 
-		<tr>
-		<td>
-			<p class="nomepiatto">Pesce spadino</p>
-			<br>
-			<p class="descrizione-piatto">occhio al pesce spadino che ti fotte il motorino</p>
-			<br>
-			<div class="dconbordo">
-				<p class="prezzo">1500$</p>
-			</div>
-		</td>
-	</tr>
-		
-	 
-	<div class="prova">
-		<a th:href="@{/}">
-			<h3>Torna indietro</h3>
 	</div>
+
+	</main>
+	
+	<div class="sotto-titolo">
+	<h2>Il Menù</h2>
+	<p class="descrizione2">Un piccolo tuffo nel mare dei sapori dei nostri piatti</p>
+	<p class="descrizione2">Un viaggio mistico ed eccitante al punto giusto</p>
+	</div> 
+	
+	<div th:each="piatto, iter : ${piatti}">
+	<div th:if="${iter.odd}">
+			<img class="foto1" th:src="@{'/img/' + *{piatto.immagine}}" height="400" width="550" align="left">
+			<p class="nomepiatto1" th:text="${piatto.nome}">Fritto misto</p>
+			<br>
+			<p class="descrizione-piatto1" th:text="${piatto.descrizione}">o frat ce sta de tutti vie vie viette a piglia u perdon</p>
+	</div>	
+		<div th:if="${iter.even}">
+			<img class="foto2" th:src="@{'/img/' + *{piatto.immagine}}" height="400" width="550" align="right">
+			<p class="nomepiatto2" th:text="${piatto.nome}">Fritto misto</p>
+			<br>
+			<p class="descrizione-piatto2" th:text="${piatto.descrizione}">o frat ce sta de tutti vie vie viette a piglia u perdon</p>
+			<br>
+
+	</div>	
+
+	</div>
+
 </body></html>

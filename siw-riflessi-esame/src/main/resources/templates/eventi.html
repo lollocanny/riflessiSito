@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/css/eventi.css">
 </head>
 <body>
+<main>
 	<div class="logo">
 			<a th:href="@{/}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
@@ -11,36 +12,31 @@
 	</div>
 	
 	<h1>Eventi</h1>
-    <p>
-      Evento dedicato alllli gnocci cu patate. <br> 
-      Ricordiamo il detto: "ma quant patane se magnat mammt pa ta fa accussi gnocc?"
-    </p>
-    <img class="foto" src="https://www.frontemarerimini.it/wp-content/uploads/2019/03/Locandina-21-22-Aprile-2019-Frontemare-Pasqua-2019.jpg" height="" width="300">
-    <div>
-      <ul>
-        <li><p>Orario:14:30</p></li>
-        <li><p>Data: 21 e 22 aprile</p></li>
-      </ul>
-    </div>
-    
-    <p> <br> </p>
-        <p>
-      Evento per pasqua e pasquetta <br> 
-      Menù topzzz venite da noi infami
-    </p>
-    <img class="foto1" th:src="@{/img/pasqua.jpg}" height="400" width="400">
-    <img class="foto2" th:src="@{/img/pasquetta.jpg}" height="400" width="400">
-    <div>
-      <ul>
-        <li><p>Orario:12:30</p></li>
-        <li><p>Data: 4 e 5 aprile</p></li>
-      </ul>
-    </div>
+</main>
+		<div th:each="evento, iter : ${eventi}">
+	<div th:if="${iter.odd}">
+			<img class="foto1" th:src="@{'/img/' + *{evento.immagine}}" height="550" width="550" align="left">
+			<p class="nomepiatto1" th:text="${evento.nome}"></p>
+			<br>
+			<p class="descrizione-piatto1" th:text="${evento.descrizione}"></p>
+			<br>
+			<span class="info">Data: <span th:text="${evento.data}"></span></span>
+			<br>
+			<span class="info"> Orario: <span th:text="${evento.orario}"></span></span>
+			<br>
+	</div>	
+		<div th:if="${iter.even}">
+			<img class="foto2" th:src="@{'/img/' + *{evento.immagine}}" height="550" width="550" align="right">
+			<p class="nomepiatto2" th:text="${evento.nome}"></p>
+			<br>
+			<p class="descrizione-piatto2" th:text="${evento.descrizione}"></p>
+			<br>
+			<p class="info2">Data: <span th:text="${evento.data}"></span></p>
+			<br>
+			<p class="info2"> Orario: <span th:text="${evento.orario}"></span></p>
+			<br>
+	</div>	
 
-   
-    
-	<div class="prova">
-		<a th:href="@{/}">
-			<h3>Torna indietro</h3>
 	</div>
+
 </body></html>
