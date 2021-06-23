@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import it.uniroma3.siw.model.MembroStaff;
-import it.uniroma3.siw.model.Piatto;
 import it.uniroma3.siw.service.CaricaFile;
 import it.uniroma3.siw.service.MembroStaffService;
 import it.uniroma3.siw.service.MvcConfig;

@@ -13,7 +13,6 @@
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
 			</a>
 		</div>
-		<a href="/pdf/menuRiflessi.pdf" download>download</a>
 			
 		<div class="titolo">
 			<h1>Menù</h1>
@@ -24,19 +23,20 @@
 	
 	<div class="sotto-titolo">
 	<h2>Il Menù</h2>
+	<p class="descrizione2">Puoi scaricare da qui il nostro menù: <a class="pdf" href="/pdf/menuRiflessi.pdf" download>menù.pdf</a>
 	<p class="descrizione2">Un piccolo tuffo nel mare dei sapori dei nostri piatti</p>
 	<p class="descrizione2">Un viaggio mistico ed eccitante al punto giusto</p>
 	</div> 
 	
 	<div th:each="piatto, iter : ${piatti}">
 	<div th:if="${iter.odd}">
-			<img class="foto1" th:src="@{'/img/' + *{piatto.immagine}}" height="400" width="550" align="left">
+			<img class="foto1" th:src="@{'/img/' + *{piatto.immagine}}" height="500" width="550" align="left">
 			<p class="nomepiatto1" th:text="${piatto.nome}">Fritto misto</p>
 			<br>
 			<p class="descrizione-piatto1" th:text="${piatto.descrizione}">o frat ce sta de tutti vie vie viette a piglia u perdon</p>
 	</div>	
 		<div th:if="${iter.even}">
-			<img class="foto2" th:src="@{'/img/' + *{piatto.immagine}}" height="400" width="550" align="right">
+			<img class="foto2" th:src="@{'/img/' + *{piatto.immagine}}" height="500" width="550" align="right">
 			<p class="nomepiatto2" th:text="${piatto.nome}">Fritto misto</p>
 			<br>
 			<p class="descrizione-piatto2" th:text="${piatto.descrizione}">o frat ce sta de tutti vie vie viette a piglia u perdon</p>

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/css/staff.css">
 </head>
 <body>
+<main>
 	<div class="logo">
 			<a th:href="@{/}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
@@ -11,11 +12,13 @@
 	</div>
 	
 	<h1>Staff</h1>
+</main>
+<h2>Il nostro staff</h2>
 <div th:each="membroStaff, iter : ${membriStaff}">
 <div th:if="${iter.odd}">
   <div class="container" >
     <div class="left">
-    <img th:src="@{'/img/' + ${membroStaff.immagine}}" height="600px" width="500"> </div>
+    <img th:src="@{'/img/' + ${membroStaff.immagine}}" height="600" width="700"> </div>
     <div class="right">
       <div class="content">
        <p class="nome" th:text="${membroStaff.nome}"></p>
@@ -25,6 +28,20 @@
     </div>
   </div>
 </div>
+<div th:if="${iter.even}">
+  <div class="container">
+    <div class="right">
+      <div class="content">
+       <p class="nome" th:text="${membroStaff.nome}"></p>
+        <br>
+        <p class="descrizione" th:text="${membroStaff.descrizione}"></p>
+      </div>
+    </div>
+    <div class="left">
+    	<img class="foto" th:src="@{'/img/' + ${membroStaff.immagine}}" height="600" width="700"> </div>
+  </div>
+</div>
+
 </div>
 
 

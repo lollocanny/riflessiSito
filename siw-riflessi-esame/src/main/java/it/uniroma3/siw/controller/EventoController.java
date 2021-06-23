@@ -36,13 +36,7 @@ public class EventoController {
 	private EventoValidator eventoValidator;
 	
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	 
-	@RequestMapping(value = {"evento/visualizzaEventi"}, method= RequestMethod.GET)
-	public String visualizzaEventi(Model model) {
-		logger.debug("visualizzaEventi");
-		return "eventi.html";
-	}
-	
+
 	@RequestMapping(value = "/evento/{id}")
 	public String getEvento(@PathVariable("id") Long id, Model model) {
 
