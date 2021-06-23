@@ -1,71 +1,108 @@
-* {
+*{
+	 margin: 0;
+ 	 padding: 0;
+ 	 box-sizing: border-box;
+}
+
+body{
 	margin:0;
-	padding:0;
-	font-family: 'Times New Roman', Times, serif;
-	background-color: #96dff2;
+	margin-bottom: 300px;
+	font-family: Libre Baskerville;
+	font-weight: 300;
+	
 }
 
-:root{
-	 --secondary-color: darkblue;
- 	 --contrast-color: white;
+main{
+	height:800px;
+	padding:50px;
+	margin:auto;
+	min-width: 460px;
+	position:relative;
+	z-index: 2;
+	background-image: url(../img/eventi.jpg); ;
+	margin-bottom: 300px;
+	box-shadow: 3px 2px 2px 0px rgba(51,51,51,0,5);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover ;
+	background-size: cover;
 }
 
-.logo{
+main .logo{
 	margin-top: 1%;
 }
-.logo a {
+
+main .logo a {
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    padding:2%;
+    padding:2% 1%;
     margin:100;
-}
+}	
 
 h1 {
   text-align: center;
-	font-size: 75px;
+	font-size: 85px;
+	font-family: Libre Baskerville;
+	font-style: italic;
+	margin-top: 15%;
 }
 
-.titolo {
-	  font-size: 75px;
-  text-decoration-color: rgb(0, 0, 160);
+
+.info{
+	font-size: 20px;
+	font-style: italic;
+	margin-left: 2%;
 }
 
-.foto {
-  margin-left:40%;
-  margin-top:10px;
-  margin-bottom:5px;
+.nomepiatto1 {
+	font-size: 50px;
+	font-style: italic;
+	color: darkblue;
+	margin-left: 50%;
+	margin-top: 15%;
+	font-family: Libre Baskerville;
+	
 }
 
-.foto1 {
-	margin-left:23%;
-	  margin-top:10px;
-  margin-bottom:10px;
+.descrizione-piatto1 {
+	font-size: 30px;
+	font-style: italic;
+	margin-left: 50%;
 }
 
-.foto2 {
-	margin-left: 15px ;
-	margin-right:23%;
-	  margin-top:10px;
-  margin-bottom:10px;
+.foto1{
+	margin-left: 12%;
+	margin-top: -8%;
 }
 
-p{
-	text-align:center;
-	font-size: 25px;
+
+.nomepiatto2 {
+	font-size: 50px;
+	font-style: italic;
+	color: darkblue;
+	margin-right: 50%;
+	margin-top: 20%;
+	text-align: right;
+	
 }
 
-img{
-	display:inline-block;
+.descrizione-piatto2 {
+	font-size: 30px;
+	font-style: italic;
+	margin-right: 50%;
+	text-align: right;
 }
 
-ul{
-  display: inline-flex;
-  margin-left: 38%;
+.info2{
+	font-size: 20px;
+	font-style: italic;
+	text-align: right;
+	margin-right: 50%;
 }
 
-li{
-  padding: 25px;
-  display: block;
+.foto2{
+	margin-right: 12%;
+	margin-top: -10%;
 }

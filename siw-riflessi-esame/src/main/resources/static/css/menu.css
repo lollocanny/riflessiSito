@@ -1,65 +1,128 @@
-* {
+*{
+	 margin: 0;
+ 	 padding: 0;
+ 	 box-sizing: border-box;
+}
+
+body{
 	margin:0;
-	padding:0;
-	font-family: 'Times New Roman', Times, serif;
-	box-sizing: border-box;
+	margin-bottom: 300px;
+	font-family: Libre Baskerville;
+	font-weight: 300;
+	
 }
 
-:root{
-	 --secondary-color: darkblue;
- 	 --contrast-color: white;
+main{
+	height:960px;
+	padding:50px;
+	margin:auto;
+	min-width: 460px;
+	position:relative;
+	z-index: 2;
+	background-image: url(../img/cibo.jpg); ;
+	margin-bottom: 300px;
+	box-shadow: 3px 2px 2px 0px rgba(51,51,51,0,5);
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover ;
+	background-size: cover;
 }
 
-.logo{
+main .logo{
 	margin-top: 1%;
 }
-.logo a {
+
+main .logo a {
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    padding:2%;
+    padding:2% 1%;
     margin:100;
+}	
+
+
+
+.titolo{
+	margin-left: 14%;
+	margin-top: 15%;
+	
+}
+
+.sotto-titolo {
+	margin-left: 14%;
+	margin-top: -10%;
 }
 
 h1 {
-  text-align: center;
-	font-size: 75px;
+  text-align: left;
+	font-size: 85px;
+	font-family: Libre Baskerville;
+	font-style: italic;
 }
 
 
 h2 {
-  text-align: center;
+  text-align: left;
 	font-size: 60px;
 	margin-top: 5%;
 	color:	rgb(0, 0, 106);
+	margin-bottom: 2%;
+	font-style: italic;
 }
 
 .descrizione{
-	text-align: center;
-	font-size: 32px;
+	text-align: left;
+	font-size: 40px;
+	font-style: italic;
 }
 
-.nomepiatto {
+.descrizione2{
+	text-align: left;
+	font-style: italic;
+	margin-bottom: 2%;
+}
+
+.nomepiatto1 {
 	font-size: 30px;
 	font-style: italic;
 	color: darkblue;
-	margin-left: 10%;
+	margin-left: 50%;
+	margin-top: 20%;
+	font-family: Libre Baskerville;
+	
 }
 
-.descrizione-piatto {
+.descrizione-piatto1 {
 	font-size: 20px;
 	font-style: italic;
-	margin-left: 10%;
+	margin-left: 50%;
 }
 
-.prezzo{
+.foto1{
+	margin-left: 12%;
+	margin-top: -10%;
+}
+
+
+.nomepiatto2 {
+	font-size: 30px;
+	font-style: italic;
+	color: darkblue;
+	margin-right: 50%;
+	margin-top: 20%;
+	text-align: right;
+	
+}
+
+.descrizione-piatto2 {
+	font-size: 20px;
+	font-style: italic;
+	margin-right: 50%;
 	text-align: right;
 }
 
-.dconbordo {
-  border-bottom: double;
-  	margin-left: 8%;
-  	margin-right: 8%;
-  	margin-bottom:2%;
+.foto2{
+	margin-right: 12%;
+	margin-top: -9.5%;
 }

@@ -1,6 +1,7 @@
 package it.uniroma3.siw.controller;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import javax.validation.Valid;
 
@@ -34,12 +35,29 @@ public class PiattoController {
 	 @Autowired
 	 private PiattoService piattoService;
 	 
-	@RequestMapping(value = {"/portataMenu/visualizzaMenu"}, method= RequestMethod.GET)
-	public String visualizzaMenu(Model model) {
-		logger.debug("visualizzaMenu");
-		return "menu.html";
-	}
-	
+		@RequestMapping(value = "menu/piatto/{id}")
+		public String getPiatto(@PathVariable("id") Long id, Model model) {
+
+			logger.debug("getPiatto");
+			try {
+				Piatto p = piattoService.piattoPerId(id);
+				model.addAttribute("piatto", p);
+
+
+				return "menu.html";
+
+			} catch (NoSuchElementException e)
+			{
+				return "error";
+			}
+		}
+		
+	    @RequestMapping(value = "menu/piatto", method = RequestMethod.GET)
+	    public String getPiatti(Model model) {
+	    		model.addAttribute("piatti", this.piattoService.getAllPiatti());
+	    		return "menu.html";
+	    }
+
 	@RequestMapping(value="/admin/aggiungiPiatto", method=RequestMethod.GET)
 	public String aggiungiPiatto(Model model) {
 		model.addAttribute("piatto", new Piatto());

@@ -1,6 +1,7 @@
 package it.uniroma3.siw.controller;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import javax.validation.Valid;
 
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import it.uniroma3.siw.model.MembroStaff;
+import it.uniroma3.siw.model.Piatto;
 import it.uniroma3.siw.service.CaricaFile;
 import it.uniroma3.siw.service.MembroStaffService;
 import it.uniroma3.siw.service.MvcConfig;
@@ -34,12 +36,29 @@ public class MembroStaffController {
 	 private MembroStaffService membroStaffService;
 	 
 	 private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	 
-	@RequestMapping(value = {"membroStaff/visualizzaStaff"}, method= RequestMethod.GET)
-	public String visualizzaStaff(Model model) {
-		logger.debug("visualizzaStaff");
-		return "staff.html";
+	
+	@RequestMapping(value = "/membroStaff/{id}")
+	public String getMembro(@PathVariable("id") Long id, Model model) {
+
+		logger.debug("getMembro");
+		try {
+			 MembroStaff ms = membroStaffService.getMembroStaff(id);
+			model.addAttribute("membroStaff", ms);
+
+
+			return "staff.html";
+
+		} catch (NoSuchElementException e)
+		{
+			return "error";
+		}
 	}
+	
+    @RequestMapping(value = "/membroStaff", method = RequestMethod.GET)
+    public String getMembriStaff(Model model) {
+    		model.addAttribute("membriStaff", this.membroStaffService.getAllMembriStaff());
+    		return "staff.html";
+    }
 	
 	
 	@RequestMapping(value="/admin/aggiungiMembroStaff", method=RequestMethod.GET)

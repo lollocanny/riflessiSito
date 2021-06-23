@@ -1,6 +1,7 @@
 package it.uniroma3.siw.controller;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import javax.validation.Valid;
 
@@ -41,6 +42,29 @@ public class EventoController {
 		logger.debug("visualizzaEventi");
 		return "eventi.html";
 	}
+	
+	@RequestMapping(value = "/evento/{id}")
+	public String getEvento(@PathVariable("id") Long id, Model model) {
+
+		logger.debug("getEvento");
+		try {
+			Evento e = eventoService.eventoPerId(id);
+			model.addAttribute("evento", e);
+
+
+			return "eventi.html";
+
+		} catch (NoSuchElementException e)
+		{
+			return "error";
+		}
+	}
+	
+    @RequestMapping(value = "/evento", method = RequestMethod.GET)
+    public String getEventi(Model model) {
+    		model.addAttribute("eventi", this.eventoService.getAllEventi());
+    		return "eventi.html";
+    }
 	
 	@RequestMapping(value="/admin/aggiungiEvento", method=RequestMethod.GET)
 	public String aggiungiEvento(Model model) {
