@@ -5,13 +5,9 @@
 	box-sizing: border-box;
 }
 
-:root{
-	 --secondary-color: darkblue;
- 	 --contrast-color: white;
-}
 
 main{
-	height:800px;
+	height:980px;
 	padding:50px;
 	margin:auto;
 	min-width: 460px;
@@ -41,19 +37,21 @@ main .logo a {
 
 h1 {
   text-align: center;
-	font-size: 85px;
+	font-size: 100px;
 	font-family: Libre Baskerville;
 	font-style: italic;
-	margin-top: 9.5%;
+	margin-top: 13%;
+	margin-right: 170px;
 	color:white;
 }
 
 h2{
 	text-align: center;
-	font-size: 40px;
+	font-size: 45px;
 	font-family: Libre Baskerville;
 	font-style: italic;
 	margin-top: -5%;
+	color:darkblue;
 }
 
 

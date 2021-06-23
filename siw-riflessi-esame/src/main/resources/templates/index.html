@@ -14,32 +14,32 @@
 			<a class="animate__animated animate__flipInX" th:href="@{/}">
 				<img class="logo" th:src="@{/img/logoPiccolo.png}" alt="">
 			</a>
-			<h3 class="animate__animated animate__flipInX animate__delay-0s" sec:authorize="hasAnyAuthority('ADMIN')">Benvenuto admin, gestisci il ristorante!</h3>
+			<h3 class="animate__animated animate__flipInX animate__delay-0s" sec:authorize="hasAnyAuthority('ADMIN')">Benvenuto admin!</h3>
 		</div>
 		<div class="containerBox">
 			<div class="menu">
 				<a href="/menu/piatto" th:href="@{/menu/piatto}" class="menuTitolo" data-async>
-					<h2 class="animate__animated animate__flipInX animate__delay-1s">Menù</h2>
+					<h2 class="animate__animated animate__flipInX animate__delay-0s">Menù</h2>
 				</a>
 			</div>
 			<div class="eventi">
 				<a href="/evento" th:href="@{/evento}" class="eventiTitolo" data-async>
-					<h2 class="animate__animated animate__flipInX animate__delay-1s">Eventi</h2>
+					<h2 class="animate__animated animate__flipInX animate__delay-0s">Eventi</h2>
 				</a>
 			</div>
 			<div class="staff">
 				<a href="/membroStaff" th:href="@{/membroStaff}" class="staffTitolo" data-async>
-					<h2 class="animate__animated animate__flipInX animate__delay-1s">Staff</h2>
+					<h2 class="animate__animated animate__flipInX animate__delay-0s">Staff</h2>
 				</a>
 			</div>
 			<div class="location">
 				<a href="/location/visualizzaLocation" class="locationTitolo" data-async>
-					<h2 class="animate__animated animate__flipInX animate__delay-1s">Location</h2>
+					<h2 class="animate__animated animate__flipInX animate__delay-0s">Location</h2>
 				</a>
 			</div>
 		</div>
 		<div class="freccia">
-			<h2 class="animate__animated animate__bounceInUp animate__delay-2s">^</h2>
+			<h2 class="animate__animated animate__bounceInUp animate__delay-1s">^</h2>
 		</div>
 	</main>
 	<footer class="footer">

@@ -13,13 +13,14 @@ body{
 }
 
 main{
-	height:860px;
+	height:980px;
 	padding:50px;
 	margin:auto;
 	position:relative;
+	min-width: 460px;
 	z-index: 2;
 	background-image: url(../img/1.jpg); ;
-	margin-bottom: 300px;
+	margin-bottom: 250px;
 	box-shadow: 3px 2px 2px 0px rgba(51,51,51,0,5);
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
@@ -48,13 +49,14 @@ main .logo a {
 .titolo{
 	margin-left: 14%;
 	margin-top: 15%;
-		color:	rgb(255, 255, 255);
+	color:	rgb(255, 255, 255);
 	
 }
 
 .sotto-titolo {
 	margin-left: 14%;
 	margin-top: -10%;
+	margin-bottom: -3%;
 }
 
 h1 {
@@ -67,7 +69,7 @@ h1 {
 
 h2 {
   text-align: left;
-	font-size: 60px;
+	font-size: 70px;
 	margin-top: 5%;
 	color:	rgb(0, 0, 106);
 	margin-bottom: 2%;
@@ -76,7 +78,7 @@ h2 {
 
 .descrizione{
 	text-align: left;
-	font-size: 40px;
+	font-size: 50px;
 	font-style: italic;
 }
 
@@ -84,10 +86,11 @@ h2 {
 	text-align: left;
 	font-style: italic;
 	margin-bottom: 2%;
+	font-size: 25px;
 }
 
 .nomepiatto1 {
-	font-size: 30px;
+	font-size: 35px;
 	font-style: italic;
 	color: darkblue;
 	margin-left: 50%;
@@ -97,7 +100,7 @@ h2 {
 }
 
 .descrizione-piatto1 {
-	font-size: 20px;
+	font-size: 24px;
 	font-style: italic;
 	margin-left: 50%;
 }
@@ -109,19 +112,19 @@ h2 {
 
 
 .nomepiatto2 {
-	font-size: 30px;
+	font-size: 35px;
 	font-style: italic;
 	color: darkblue;
-	margin-right: 50%;
+	margin-right: 55%;
 	margin-top: 20%;
 	text-align: right;
 	
 }
 
 .descrizione-piatto2 {
-	font-size: 20px;
+	font-size: 25px;
 	font-style: italic;
-	margin-right: 50%;
+	margin-right: 55%;
 	text-align: right;
 }
 

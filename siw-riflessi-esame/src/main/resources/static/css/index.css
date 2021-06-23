@@ -12,7 +12,7 @@ body{
 }
 
 main{
-	height:1160px;
+	height:980px;
 	padding:50px;
 	margin:auto;
 	min-width: 460px;
@@ -38,7 +38,7 @@ main .logo{
 .top h3{
 	color:white;	
 	font-size: 28px;
-	margin-left: 50%;
+	margin-left: 65%;
 	padding-top: 7%;
 	position:relative;
 	
@@ -153,7 +153,7 @@ main .containerBox .menu a h2{
 	color:white;
 	font-size: 80px;
 	text-align: center;
-	margin-top: 450px;
+	margin-top: 350px;
 	margin-right: 50px;
 }
 	
@@ -192,7 +192,7 @@ main .containerBox .menu a h2{
  color:  #ffffff;
  margin: 20px 0 20px;
  padding: 0;
- font-size: 22px;
+ font-size: 20px;
 }
 
  
