@@ -15,26 +15,20 @@
                  
                      <form id="form" class="codehim-form" th:action="@{/admin/aggiungiEvento}" th:object="${evento}" method="POST" enctype="multipart/form-data">                                                            
                         
-                             <div class="form-group" th:classappend="${#fields.hasErrors('nome')} ? has-error : ''">
+                             <div class="form-group">
                                  <label th:text="#{richiesta.evento.nome}">
                						...                  
                                  </label>
-                                 <div th:classappend="${#fields.hasErrors('nome')} ? 'input-icon right' : ''">
-                                  <i th:if="${#fields.hasErrors('nome')}" class="fa fa-exclamation tooltips" data-original-title="Il nome deve essere compreso tra 2 e 100 caratteri" data-container="body"></i>
                                  <input type="text" class="cm-input"  th:field="*{nome}" placeholder="Tra 2 e 100 caratteri"/>
-                                 <span th:if="${#fields.hasErrors('nome')}" class="help-block" th:errors="*{nome}"></span>
-                                 </div>
+                                 <span class="help-block" th:errors="*{nome}"></span>
                              </div>    
                                
                              <div class="form-group" th:classappend="${#fields.hasErrors('data')} ? has-error : ''">
                					<label th:text="#{richiesta.evento.data}">
                						...                  
                                  </label>
-                                 <div th:classappend="${#fields.hasErrors('data')} ? 'input-icon right' : ''">
-                                  <i th:if="${#fields.hasErrors('data')}" class="fa fa-exclamation tooltips" data-original-title="La data deve essere compresa tra 2 e 100 caratteri" data-container="body"></i>
                                  <input type="date" class="cm-input" id="data" th:field="*{data}" placeholder="Tra 2 e 100 caratteri"/>
-                                 <span th:if="${#fields.hasErrors('data')}" class="help-block" th:errors="*{data}"></span>
-                                 </div>
+                                 <span class="help-block" th:errors="*{data}"></span>
                              </div>    
                                                           
                               <label th:text="#{richiesta.evento.immagine}">
@@ -50,7 +44,7 @@
 							<label th:text="#{richiesta.evento.orario}">
 									...
 							</label>
-								<input type="text" th:field="*{orario}" class="cm-input"/>
+								<input type="text" th:field="*{orario}"  placeholder="00:00" class="cm-input"/>
 			
 							
                          <div class="form-actions">

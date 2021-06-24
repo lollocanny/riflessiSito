@@ -11,7 +11,6 @@ body{
   			background-size:cover;
   			position:relative;
   			height:1153.5px;
-  			background-position-y: -230px;
   			
     }
    
@@ -128,19 +127,4 @@ h1{
     position:relative;
 }
 
-.newArtist:link, .newArtist:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.newArtist:hover, .newArtist:active {
-  background-color: black;
-  color: white;
-}
